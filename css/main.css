@@ -1,0 +1,581 @@
+/* Setting up Basic Variables */
+/* prefixes */
+@font-face {
+  font-family: "Proxima Nova";
+  src: url("../fonts/ProximaNova-Regular.otf") format("opentype");
+  font-weight: normal;
+}
+@font-face {
+  font-family: "Proxima Nova";
+  src: url("../fonts/ProximaNova-Semibold.otf") format("opentype");
+  font-weight: 600;
+}
+* {
+  margin: 0;
+  padding: 0;
+  line-height: 100%;
+  font-family: "Proxima Nova";
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  list-style: none;
+}
+
+input::-webkit-input-placeholder, .container main .main-container .right-section .newsletter form button::-webkit-input-placeholder, .container main .main-container .right-section .social-networks form button::-webkit-input-placeholder {
+  position: relative;
+  top: 1px;
+}
+
+input::-moz-placeholder, .container main .main-container .right-section .newsletter form button::-moz-placeholder, .container main .main-container .right-section .social-networks form button::-moz-placeholder {
+  position: relative;
+  top: 1px;
+}
+
+input:-moz-placeholder, .container main .main-container .right-section .newsletter form button:-moz-placeholder, .container main .main-container .right-section .social-networks form button:-moz-placeholder {
+  position: relative;
+  top: 1px;
+}
+
+input:-ms-input-placeholder, .container main .main-container .right-section .newsletter form button:-ms-input-placeholder, .container main .main-container .right-section .social-networks form button:-ms-input-placeholder {
+  position: relative;
+  top: 1px;
+}
+
+button::-moz-focus-inner,
+input[type="submit"]::-moz-focus-inner,
+.container main .main-container .right-section .newsletter form button[type="submit"]::-moz-focus-inner,
+.container main .main-container .right-section .social-networks form button[type="submit"]::-moz-focus-inner,
+input[type="button"]::-moz-focus-inner,
+.container main .main-container .right-section .newsletter form button[type="button"]::-moz-focus-inner,
+.container main .main-container .right-section .social-networks form button[type="button"]::-moz-focus-inner {
+  padding: 0 !important;
+  border: 0 none !important;
+  margin-top: -1px;
+  margin-bottom: -1px;
+}
+
+.clearfix {
+  clear: both;
+}
+
+/* end of prefixes */
+.container, .container header {
+  width: 100%;
+  height: 2500px;
+  position: relative;
+  overflow: hidden;
+  background-color: #fafafa;
+}
+.container header {
+  height: 70px;
+  border-bottom: 1px solid #e6e6e6;
+  background-color: #fff;
+}
+.container header .logo {
+  position: absolute;
+  width: 100px;
+  height: 40px;
+  border-radius: 50px;
+  background: #ffc966;
+  left: 50%;
+  margin-left: -50px;
+  top: 15px;
+  text-align: center;
+  cursor: pointer;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+.container header .logo p {
+  color: #fff;
+  text-transform: capitalize;
+  padding-top: 13px;
+}
+.container header .search {
+  position: relative;
+  width: 500px;
+  height: 35px;
+  overflow: hidden;
+  left: 2.5%;
+  top: 15px;
+}
+.container header .search form input[type="text"], .container header .search main .main-container .right-section .newsletter form button[type="text"], .container main .main-container .right-section .newsletter header .search form button[type="text"], .container header .search main .main-container .right-section .social-networks form button[type="text"], .container main .main-container .right-section .social-networks header .search form button[type="text"] {
+  width: 50%;
+  height: 35px;
+  background-color: #f2f2f2;
+  padding-left: 35px;
+  font-size: 13px;
+  color: #a6a6a6;
+  border-radius: 3px;
+  transition: all 150ms ease-in-out;
+  border: 1px solid #d9d9d9;
+}
+.container header .search form input[type="text"]:focus, .container header .search main .main-container .right-section .newsletter form button[type="text"]:focus, .container main .main-container .right-section .newsletter header .search form button[type="text"]:focus, .container header .search main .main-container .right-section .social-networks form button[type="text"]:focus, .container main .main-container .right-section .social-networks header .search form button[type="text"]:focus {
+  width: 80% !important;
+}
+.container header .search form #find {
+  position: absolute;
+  top: 8px;
+  left: 10px;
+  background: none;
+  cursor: pointer;
+}
+.container header .search form #find .fa-search {
+  font-size: 18px;
+  color: #a6a6a6;
+}
+.container header .user-options {
+  position: absolute;
+  right: 25px;
+  top: 15px;
+}
+.container header .user-options #login-btn {
+  position: relative;
+  right: 15px;
+  top: 3px;
+  font-size: 14px;
+  letter-spacing: 0.2px;
+  color: #007cff;
+}
+.container header .user-options #login-btn:hover {
+  border-bottom: 1px solid #007cff;
+}
+.container header .user-options #sign-up-btn {
+  width: 120px;
+  height: 40px;
+  border-radius: 3px;
+  background-color: #25e077;
+  border: 1px solid #1ab85f;
+  cursor: pointer;
+  color: #fff;
+  font-size: 13px;
+  letter-spacing: 0.2px;
+  font-weight: 600;
+  transition: all 100ms ease-in-out;
+}
+.container header .user-options #sign-up-btn:hover {
+  background-color: #52e693;
+}
+.container .search-box {
+  position: absolute;
+  width: 400px;
+  height: 350px;
+  background-color: #fff;
+  left: 2.5%;
+  z-index: 1;
+  display: none;
+  box-shadow: 3px 3px 3px 0 rgba(0, 0, 0, 0.1);
+}
+.container .search-box .search-result {
+  width: 100%;
+  padding: 15px 0px;
+  position: relative;
+  margin: 0 auto;
+  border-bottom: 1px solid #eee;
+}
+.container .search-box .search-result h4, .container .search-box .search-result .results nav ul li a p, .container .search-box .results nav ul li a .search-result p {
+  font-weight: normal;
+  color: #6f6f6f;
+  padding-left: 15px;
+}
+.container .search-box .results {
+  position: absolute;
+  top: 47px;
+  width: 100%;
+  overflow: scroll;
+  height: 80%;
+}
+.container .search-box .results nav {
+  width: 100%;
+  height: auto;
+  position: relative;
+}
+.container .search-box .results nav ul li {
+  padding-left: 15px;
+  display: block;
+  width: 100%;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #eee;
+}
+.container .search-box .results nav ul li:hover {
+  background: #f5f5f5;
+}
+.container .search-box .results nav ul li a {
+  width: 100%;
+  background-color: #eee;
+}
+.container .search-box .results nav ul li a .user-picture {
+  width: 35px;
+  height: 35px;
+  overflow: hidden;
+  border-radius: 100%;
+  float: left;
+}
+.container .search-box .results nav ul li a .user-picture img {
+  width: 100%;
+}
+.container .search-box .results nav ul li a h4, .container .search-box .results nav ul li a p {
+  color: #6f6f6f;
+  text-transform: capitalize;
+  font-size: 14px;
+  font-weight: normal;
+  position: relative;
+  left: 15px;
+  top: 5px;
+  line-height: 15px;
+}
+.container .search-box .results nav ul li a p {
+  font-size: 11px;
+  color: #999;
+}
+.container .search-box .see-more {
+  position: absolute;
+  width: 100%;
+  height: 12%;
+  bottom: 0px;
+}
+.container .search-box .see-more button {
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  color: #6f6f6f;
+  text-transform: capitalize;
+  cursor: pointer;
+  text-decoration: underline;
+  border-top: 1px solid #eee;
+}
+.container main .intro-section {
+  position: relative;
+  top: 50px;
+  width: 75%;
+  height: 550px;
+  margin: 0 auto;
+  text-align: center;
+  background: url("../images/hero-image.jpg") center no-repeat;
+  background-size: 100%;
+  border-radius: 5px;
+}
+.container main .intro-section .title {
+  position: relative;
+  top: 200px;
+}
+.container main .intro-section .title h1 {
+  font-size: 40px;
+  font-weight: 600;
+  width: 80%;
+  margin: 0 auto;
+  text-transform: capitalize;
+  color: #fff;
+  line-height: 50px;
+}
+.container main .intro-section .title p {
+  color: #fff;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 25px;
+  width: 60%;
+  margin: 0 auto;
+  letter-spacing: 1.5px;
+}
+.container main .intro-section .title .user-login-sign-up {
+  position: relative;
+  top: 20px;
+}
+.container main .intro-section .title .user-login-sign-up button {
+  width: 150px;
+  height: 40px;
+  border-radius: 3px;
+  background-color: #25e077;
+  cursor: pointer;
+  color: #fff;
+  font-size: 13px;
+  letter-spacing: 0.2px;
+  font-weight: normal;
+  transition: all 100ms ease-in-out;
+}
+.container main .intro-section .title .user-login-sign-up button:hover {
+  background-color: #52e693;
+}
+.container main .intro-section .title .user-login-sign-up #learn-more {
+  background: none;
+  border: 1px solid #25e077;
+}
+.container main .intro-section .title .user-login-sign-up #learn-more:hover {
+  background: #25e077;
+}
+.container main .main-container {
+  position: relative;
+  top: 100px;
+  margin: 0 auto;
+  width: 75%;
+  height: auto;
+  overflow: hidden;
+}
+.container main .main-container .right-section {
+  width: 500px;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.container main .main-container .right-section .top-stories, .container main .main-container .right-section .newsletter, .container main .main-container .right-section .social-networks {
+  position: absolute;
+  right: 0;
+  width: 250px;
+  height: 350px;
+  background-color: white;
+  border: 1px solid #dedede;
+}
+.container main .main-container .right-section .top-stories h3, .container main .main-container .right-section .newsletter h3, .container main .main-container .right-section .social-networks h3 {
+  font-size: 13px;
+  text-transform: capitalize;
+  color: #000;
+  position: relative;
+  left: 15px;
+  top: 15px;
+  font-weight: normal;
+  letter-spacing: 0.5px;
+}
+.container main .main-container .right-section .top-stories nav, .container main .main-container .right-section .newsletter nav, .container main .main-container .right-section .social-networks nav {
+  position: relative;
+  top: 30px;
+  width: 100%;
+  height: 300px;
+  overflow: auto;
+  border-top: 1px solid #eee;
+}
+.container main .main-container .right-section .top-stories nav ul li, .container main .main-container .right-section .newsletter nav ul li, .container main .main-container .right-section .social-networks nav ul li {
+  width: 100%;
+  height: 55px;
+}
+.container main .main-container .right-section .top-stories nav ul li:hover, .container main .main-container .right-section .newsletter nav ul li:hover, .container main .main-container .right-section .social-networks nav ul li:hover {
+  background-color: #f5f5f5;
+}
+.container main .main-container .right-section .top-stories nav ul li a, .container main .main-container .right-section .newsletter nav ul li a, .container main .main-container .right-section .social-networks nav ul li a {
+  width: 100%;
+}
+.container main .main-container .right-section .top-stories nav ul li a .owner-img, .container main .main-container .right-section .newsletter nav ul li a .owner-img, .container main .main-container .right-section .social-networks nav ul li a .owner-img {
+  width: 35px;
+  height: 35px;
+  border-radius: 100%;
+  overflow: hidden;
+  position: relative;
+  top: 10px;
+  margin-left: 15px;
+}
+.container main .main-container .right-section .top-stories nav ul li a .owner-img img, .container main .main-container .right-section .newsletter nav ul li a .owner-img img, .container main .main-container .right-section .social-networks nav ul li a .owner-img img {
+  width: 100%;
+}
+.container main .main-container .right-section .top-stories nav ul li a h4, .container main .main-container .right-section .newsletter nav ul li a h4, .container main .main-container .right-section .social-networks nav ul li a h4, .container main .main-container .right-section .top-stories .search-box .results nav ul li a p, .container .search-box .results main .main-container .right-section .top-stories nav ul li a p, .container main .main-container .right-section .newsletter .search-box .results nav ul li a p, .container .search-box .results main .main-container .right-section .newsletter nav ul li a p, .container main .main-container .right-section .social-networks .search-box .results nav ul li a p, .container .search-box .results main .main-container .right-section .social-networks nav ul li a p, .container main .main-container .right-section .top-stories nav ul li a p, .container main .main-container .right-section .newsletter nav ul li a p, .container main .main-container .right-section .social-networks nav ul li a p {
+  position: relative;
+  top: -25px;
+  margin-left: 60px;
+  text-transform: capitalize;
+  font-weight: normal;
+}
+.container main .main-container .right-section .top-stories nav ul li a h4, .container main .main-container .right-section .newsletter nav ul li a h4, .container main .main-container .right-section .social-networks nav ul li a h4, .container main .main-container .right-section .top-stories .search-box .results nav ul li a p, .container .search-box .results main .main-container .right-section .top-stories nav ul li a p, .container main .main-container .right-section .newsletter .search-box .results nav ul li a p, .container .search-box .results main .main-container .right-section .newsletter nav ul li a p, .container main .main-container .right-section .social-networks .search-box .results nav ul li a p, .container .search-box .results main .main-container .right-section .social-networks nav ul li a p {
+  line-height: 20px;
+  color: #000;
+  font-size: 12px;
+}
+.container main .main-container .right-section .top-stories nav ul li a p, .container main .main-container .right-section .newsletter nav ul li a p, .container main .main-container .right-section .social-networks nav ul li a p {
+  font-size: 11px;
+  color: gray;
+}
+.container main .main-container .right-section .newsletter, .container main .main-container .right-section .social-networks {
+  top: 380px;
+  height: 200px;
+}
+.container main .main-container .right-section .newsletter p, .container main .main-container .right-section .social-networks p {
+  position: relative;
+  top: 45px;
+  font-size: 12px;
+  margin: 0 auto;
+  width: 80%;
+  text-align: center;
+  line-height: 15px;
+  letter-spacing: 0.5px;
+}
+.container main .main-container .right-section .newsletter .border, .container main .main-container .right-section .social-networks .border {
+  width: 100%;
+  height: 1px;
+  position: relative;
+  top: 25px;
+  border-bottom: 1px solid #eee;
+}
+.container main .main-container .right-section .newsletter form, .container main .main-container .right-section .social-networks form {
+  position: relative;
+  top: 60px;
+  margin: 0 auto;
+  text-align: center;
+}
+.container main .main-container .right-section .newsletter form input, .container main .main-container .right-section .social-networks form input, .container main .main-container .right-section .newsletter form button, .container main .main-container .right-section .social-networks form button {
+  width: 80%;
+  height: 30px;
+  border: 1px solid #ccc;
+  margin: 0 auto;
+  margin-bottom: 5px;
+  padding-left: 10px;
+  font-size: 12px;
+}
+.container main .main-container .right-section .newsletter form button, .container main .main-container .right-section .social-networks form button {
+  margin-bottom: 0px;
+  padding-left: 0px;
+  cursor: pointer;
+  text-transform: capitalize;
+  background-color: #25e077;
+  border: 1px solid #1ab85f;
+  color: #fff;
+  transition: all 150ms linear;
+}
+.container main .main-container .right-section .newsletter form button:hover, .container main .main-container .right-section .social-networks form button:hover {
+  background: #52e693;
+}
+.container main .main-container .right-section .social-networks {
+  top: 610px;
+  height: 100px;
+}
+.container main .main-container .right-section .social-networks .networks {
+  position: relative;
+  top: 40px;
+  width: 90%;
+  margin: 0 auto;
+}
+.container main .main-container .right-section .social-networks .networks a {
+  float: left;
+  color: #aaa;
+  margin: 0 15px;
+  transition: all 150ms linear;
+}
+.container main .main-container .right-section .social-networks .networks a:hover {
+  color: #6a6a6a;
+}
+.container main .main-container .right-section .social-networks .networks a i {
+  font-size: 30px;
+}
+.container main .main-container .left-section {
+  position: relative;
+  z-index: 10;
+  width: 700px;
+  height: 100%;
+  float: left;
+}
+.container main .main-container .left-section .top-posts .post {
+  width: 100%;
+  height: 450px;
+  border-radius: 5px;
+  background-color: #fff;
+  border: 1px solid #dedede;
+  margin-bottom: 25px;
+  position: relative;
+}
+.container main .main-container .left-section .top-posts .post .post-author {
+  width: 200px;
+  height: 40px;
+  overflow: hidden;
+  position: absolute;
+  bottom: 20px;
+  left: 25px;
+}
+.container main .main-container .left-section .top-posts .post .post-author .user-pic {
+  width: 35px;
+  height: 35px;
+  border-radius: 100%;
+  overflow: hidden;
+}
+.container main .main-container .left-section .top-posts .post .post-author .user-pic img {
+  width: 100%;
+}
+.container main .main-container .left-section .top-posts .post .post-author #owner {
+  position: absolute;
+  top: 2px;
+  left: 50px;
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: capitalize;
+  text-decoration: none;
+  line-height: 20px;
+  color: #000;
+}
+.container main .main-container .left-section .top-posts .post .post-author #owner-job {
+  font-size: 11px;
+  font-weight: 100;
+  color: #999;
+  text-transform: capitalize;
+}
+.container main .main-container .left-section .top-posts .post .post-author * {
+  float: left;
+}
+.container main .main-container .left-section .top-posts .post #post-title, .container main .main-container .left-section .top-posts .post #descreption {
+  position: relative;
+  left: 25px;
+  top: 50px;
+  width: 650px;
+  font-size: 20px;
+  line-height: 25px;
+  text-transform: capitalize;
+  font-weight: 600;
+  color: #000;
+}
+.container main .main-container .left-section .top-posts .post #post-title span, .container main .main-container .left-section .top-posts .post #descreption span {
+  font-size: 12px;
+  color: #b3b3b3;
+  font-weight: normal;
+  letter-spacing: 0.5px;
+  text-transform: lowercase;
+  padding-left: 10px;
+}
+.container main .main-container .left-section .top-posts .post #descreption {
+  top: 70px;
+  font-size: 13px;
+  font-weight: normal;
+  width: 600px;
+  line-height: 20px;
+  color: gray;
+  text-transform: lowercase;
+}
+.container main .main-container .left-section .top-posts .post .thumbnail-post {
+  position: relative;
+  margin: 0 auto;
+  overflow: hidden;
+  top: 25px;
+  width: 650px;
+  height: 200px;
+  margin: 0 auto;
+  background-color: #ccc;
+}
+.container main .main-container .left-section .top-posts .post .thumbnail-post img {
+  width: 100%;
+  position: absolute;
+  top: -35%;
+}
+.container main .main-container .left-section .top-posts .post .post-informations {
+  position: absolute;
+  right: 25px;
+  bottom: 25px;
+}
+.container main .main-container .left-section .top-posts .post .post-informations div {
+  float: right;
+  height: 30px;
+  border-radius: 50px;
+  margin-left: 5px;
+}
+.container main .main-container .left-section .top-posts .post .post-informations .view-post, .container main .main-container .left-section .top-posts .post .post-informations .likes, .container main .main-container .left-section .top-posts .post .post-informations .comments {
+  width: 40px;
+  text-align: center;
+  background-color: #00e600;
+}
+.container main .main-container .left-section .top-posts .post .post-informations .view-post a, .container main .main-container .left-section .top-posts .post .post-informations .likes a, .container main .main-container .left-section .top-posts .post .post-informations .comments a {
+  color: #fff;
+  position: relative;
+  top: 6px;
+  font-size: 13px;
+}
+.container main .main-container .left-section .top-posts .post .post-informations .likes, .container main .main-container .left-section .top-posts .post .post-informations .comments {
+  width: 80px;
+  background-color: #ff6666;
+}
+.container main .main-container .left-section .top-posts .post .post-informations .comments {
+  background-color: #6666ff;
+}

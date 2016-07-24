@@ -1,0 +1,14 @@
+{
+  "name": "tell_the_world",
+  "version": "1.0.0",
+  "description": "a platform that provide people with the ability to share their stories with the world around them",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Oussama Yamine",
+  "license": "MIT",
+  "dependencies": {
+    "bower": "^1.7.9"
+  }
+}
